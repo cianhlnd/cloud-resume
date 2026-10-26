@@ -23,4 +23,6 @@ az storage container-rm create --name "$CONTAINER" --resource-group "$RG" --stor
 
 az lock create --name statelock --resource-group "$RG" --resource "$SA" --lock-type CanNotDelete --resource-type Microsoft.Storage/storageAccounts
 
-az storage account blob-service-properties update --account-name "$SA" --enable-versioning true --enable-delete-retention true --delete-retention-days 7
+az storage account blob-service-properties update --resource-group "$RG" --account-name "$SA" --enable-versioning true --enable-delete-retention true --delete-retention-days 7
+
+az storage account update --resource-group "$RG" --name "$SA" --allow-shared-key-access false
