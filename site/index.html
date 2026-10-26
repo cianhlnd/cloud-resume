@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cian Hyland | Azure &amp; Infrastructure</title>
+  <meta name="description" content="CV of Cian Hyland: Azure Administrator (AZ-104), hybrid identity, PowerShell automation and infrastructure in Dublin, Ireland.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="page">
+    <!-- Sidebar: identity, contact, certifications, skills -->
+    <aside class="side">
+      <div class="top">
+      <header class="id">
+        <h1>Cian<br>Hyland</h1>
+        <p class="role">Azure &amp; infrastructure engineering, Dublin</p>
+      </header>
+
+      <ul class="contact">
+        <li><a href="https://github.com/cianhlnd/Project-Work">GitHub: cianhlnd</a></li>
+        <!-- TODO: replace with your LinkedIn profile URL -->
+        <li><a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a></li>
+      </ul>
+
+      <section aria-labelledby="certs">
+        <h2 id="certs">Certifications</h2>
+        <ul class="certs">
+          <li>Microsoft Certified: Azure Administrator Associate (AZ&#8209;104)</li>
+          <li>Microsoft Certified: Azure Fundamentals (AZ&#8209;900)</li>
+        </ul>
+      </section>
+      </div>
+
+      <section class="skills-block" aria-labelledby="skills">
+        <h2 id="skills">Skills</h2>
+        <dl class="skills">
+          <dt>Cloud &amp; hybrid infrastructure</dt>
+          <dd>Microsoft Azure, Entra ID PIM, hybrid environments</dd>
+
+          <dt>Scripting &amp; automation</dt>
+          <dd>PowerShell, Azure CLI, Git, Bash (fundamentals), Python (fundamentals)</dd>
+
+          <dt>Tools &amp; practices</dt>
+          <dd>Technical documentation, incident management, root cause analysis, ManageEngine and Freshservice</dd>
+
+          <dt>Monitoring &amp; backup</dt>
+          <dd>Grafana, InfluxDB, Telegraf, Schneider EcoStruxure, Rubrik, Veeam Backup and Replication, ControlUp</dd>
+
+          <dt>Containerisation</dt>
+          <dd>Docker, Arcane (Docker management)</dd>
+
+          <dt>Windows Server &amp; directory services</dt>
+          <dd>Windows Server 2022 &amp; 2025, Active Directory, Group Policy</dd>
+
+          <dt>Networking</dt>
+          <dd>TCP/IP, subnetting, routing, DNS, DHCP, VLANs, firewall administration (FortiGate, pfSense), VPNs, SNMP</dd>
+
+          <dt>Microsoft 365</dt>
+          <dd>Exchange Online, Teams, SharePoint</dd>
+
+          <dt>Virtualisation</dt>
+          <dd>Hyper-V, Nutanix, Citrix Cloud, FSLogix</dd>
+
+          <dt>Endpoint management</dt>
+          <dd>Microsoft Intune, Tanium</dd>
+
+          <dt>Operating systems</dt>
+          <dd>Windows 10/11, Ubuntu Server</dd>
+        </dl>
+      </section>
+    </aside>
+
+    <main id="main" class="main">
+      <section class="statement" aria-label="Professional statement">
+        <p class="lede">Computer Science and Software Engineering graduate (First-Class Honours) with close to three years in IT support and systems administration for a 300+ user regulated professional services firm, with responsibilities over the past year weighted towards infrastructure and automation.</p>
+        <p>AZ-900 and AZ-104 certified. Hands-on Azure experience across identity, IaaS, networking and monitoring: production administration of Entra ID and Azure storage, and self-directed lab work in a live subscription covering RBAC and Azure Policy, virtual networking, load balancing, Log Analytics and Azure Monitor.</p>
+        <p>Experienced in hybrid identity between on-premises Active Directory and Entra ID, firewall and network troubleshooting, and infrastructure monitoring with ControlUp, Tanium, Telegraf, InfluxDB and Grafana, including a Docker-containerised dashboard managed through Arcane. Production PowerShell experience, having designed and deployed automation suites that replaced recurring manual processes with repeatable, auditable workflows. Collaborated with a DevOps engineer on containerised deployment of a full-stack application during university.</p>
+      </section>
+
+      <section aria-labelledby="experience">
+        <h2 id="experience">Experience</h2>
+
+        <article class="job">
+          <header>
+            <h3>IT Helpdesk Technician – Support Engineering &amp; System Administration</h3>
+            <p class="meta">William Fry <span class="when">May 2024 – present</span></p>
+          </header>
+
+          <h4>Infrastructure &amp; systems administration</h4>
+          <ul>
+            <li>Administer Entra ID in the production tenant across users, groups, licence assignment and PIM role activation, and manage Azure storage accounts hosting assets consumed by Intune configuration profiles</li>
+            <li>Manage hybrid identity between on-premises Active Directory and Entra ID via Entra Connect, including on-premises security groups as the authoritative source for Microsoft 365 licence assignment, and hybrid mailbox conversion driven by on-premises recipient attributes</li>
+            <li>Diagnosed a connectivity failure blocking production automation, isolating a per-host firewall egress policy by comparison against a peer server on the same subnet and gateway, and migrated the affected scripts to a new script server to restore Exchange Online authentication</li>
+            <li>Contributed to a production infrastructure monitoring pipeline, onboarding UPS devices via SNMP and Schneider EcoStruxure and building collection, storage and health dashboarding on Telegraf, InfluxDB and Grafana, with the dashboard containerised in Docker and managed through Arcane</li>
+            <li>Administer Active Directory across user lifecycle, group membership, OU structure, Group Policy and delegation of control, alongside Exchange Online mailbox administration in a hybrid configuration</li>
+            <li>Administer the endpoint estate through Microsoft Intune and Tanium</li>
+          </ul>
+
+          <h4>PowerShell automation &amp; development</h4>
+          <ul>
+            <li>Designed and deployed a production leaver offboarding automation suite of three integrated scripts covering Active Directory account lifecycle, Exchange Online mailbox conversion, forwarding configuration and file system archiving via Robocopy, processing approximately 30 users per quarter and significantly reducing manual effort and risk of error</li>
+            <li>Built a department rotation automation script processing 40+ users per cycle, handling AD group membership, department attribute updates and Exchange Online shared mailbox permissions, driven by an external JSON configuration</li>
+            <li>Developed a mailbox permission migration tool supporting a firm-wide delegation initiative, covering eight operational directions across full access, folder-level and calendar permissions, with a companion auditing script for effective-permission reporting</li>
+            <li>Test scripts against test accounts before running them in production</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <header>
+            <h3>IT Helpdesk Technician (Internship)</h3>
+            <p class="meta">William Fry <span class="when">February 2023 – August 2023</span></p>
+          </header>
+          <ul>
+            <li>Provided first- and second-line support across Windows desktops, Microsoft 365 and core business applications, triaging and resolving incidents through the service desk</li>
+            <li>Built the troubleshooting and incident management foundations carried into the permanent role, returning to the firm full time after graduating</li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
+
+        <article class="project">
+          <h3>Self-directed AZ-104 lab work in a live Azure subscription</h3>
+          <dl class="labs">
+            <dt>Identity &amp; governance</dt>
+            <dd>RBAC including custom role definitions across management group, subscription and resource scopes, Azure Policy, resource locks, dynamic groups</dd>
+            <dt>Backup &amp; monitoring</dt>
+            <dd>Recovery Services vault for VM backup and restore, Log Analytics workspaces, Azure Monitor, data collection rules with the Azure Monitor Agent, action groups and alerting, budgets and cost management</dd>
+            <dt>Virtual networking</dt>
+            <dd>VNet peering verified through Network Watcher, NSG rule design and evaluation, private DNS zones with cross-VNet resolution</dd>
+            <dt>Load balancing</dt>
+            <dd>Internal load balancer deployed end to end with a two-VM backend pool, health probes and verified traffic distribution</dd>
+            <dt>Storage</dt>
+            <dd>SAS token scoping, blob RBAC and ABAC conditions, AzCopy data transfer</dd>
+            <dt>Compute</dt>
+            <dd>Windows and Linux virtual machines, Virtual Machine Scale Sets, Azure Bastion, App Service deployment</dd>
+          </dl>
+        </article>
+
+        <article class="project">
+          <h3>Self-managed infrastructure home lab</h3>
+          <ul>
+            <li>Designed and deployed a multi-server Hyper-V environment: two domain controllers, Windows client, file server and Ubuntu Server behind a pfSense firewall</li>
+            <li>Implemented pfSense with VLAN segmentation, inter-subnet routing, DHCP and DNS forwarding and firewall rules, resolving faults through break-and-fix exercises</li>
+            <li>Deployed Windows Server DNS and DHCP roles and configured Active Directory with structured OU design, Group Policy for software deployment, drive mappings and folder redirection</li>
+            <li>Administered Ubuntu Server including SSH key-based authentication, file systems and permissions, and configured Veeam Backup and Replication for VM backup with full and file-level restore testing</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <h3>Full stack web application</h3>
+          <ul>
+            <li>Developed a full-stack application utilising the MERN stack with RESTful backend services, collaborating with a DevOps engineer on containerised deployment to university infrastructure</li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="education">
+        <h2 id="education">Education</h2>
+        <article class="job">
+          <header>
+            <h3>B.Sc. Computer Science &amp; Software Engineering, First-Class Honours</h3>
+            <p class="meta">Maynooth University <span class="when">2020 – 2024</span></p>
+          </header>
+        </article>
+      </section>
+
+      <footer class="build">
+        <h2>About this page</h2>
+        <!-- TODO: update the repo URL once the cloud-resume repo exists -->
+        <p>This CV is a static site hosted on Azure Storage. Terraform builds the infrastructure and GitHub Actions deploys every change. The code is on <a href="https://github.com/cianhlnd/cloud-resume">GitHub</a>.</p>
+        <!-- Visitor counter for the later stage of the challenge. Remove "hidden" once the API exists. -->
+        <p id="visitor-counter" hidden>Visits: <span id="visitor-count">…</span></p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
