@@ -24,3 +24,12 @@ variable "resume_tags" {
     project = "Resume"
   }
 }
+
+variable "object_ids" {
+  description = "Used to give permission to both myself and the pipeline"
+  type        = map(string)
+  default = {
+    my_id = "c938b2ab-94b5-42d7-b3a6-6408172d54e2"
+    sp_id = "4d1cf86a-1af9-4cbc-ae64-61bedc0b284b"
+  }
+}

@@ -32,7 +32,14 @@ data "azurerm_client_config" "current" {
 }
 
 resource "azurerm_role_assignment" "sa_blob_data_contributor" {
-  scope                = azurerm_storage_account.sa.id
+  for_each = var.object_ids
+
   role_definition_name = "Storage Blob Data Contributor"
-  principal_id         = data.azurerm_client_config.current.object_id
+  principal_id         = each.value
+  scope                = azurerm_storage_account.sa.id
 }
+
+##moved {
+  ##from = azurerm_role_assignment.sa_blob_data_contributor
+  ##to   = azurerm_role_assignment.sa_blob_data_contributor["my_id"]
+##}
