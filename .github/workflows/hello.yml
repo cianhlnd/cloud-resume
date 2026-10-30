@@ -1,0 +1,16 @@
+name: Hello test                 # the name shown in the Actions tab
+
+on:                              # TRIGGER: when this runs
+  workflow_dispatch:             # adds a "Run workflow" button in the Actions tab
+
+jobs:                            # what to run
+  hello:                         # a job; the name is your choice
+    runs-on: ubuntu-latest       # GitHub starts a fresh Ubuntu VM for this job
+    steps:                       # run in order, top to bottom, like a script
+      - name: Say hello          # a label shown in the run's log
+        run: echo "Hello from GitHub Actions"   # a shell command
+
+      - name: Show the machine
+        run: |                   # | means several lines of commands
+          whoami
+          uname -a
