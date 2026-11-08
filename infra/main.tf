@@ -40,6 +40,6 @@ resource "azurerm_role_assignment" "sa_blob_data_contributor" {
 }
 
 ##moved {
-  ##from = azurerm_role_assignment.sa_blob_data_contributor
-  ##to   = azurerm_role_assignment.sa_blob_data_contributor["my_id"]
+##from = azurerm_role_assignment.sa_blob_data_contributor
+##to   = azurerm_role_assignment.sa_blob_data_contributor["my_id"]
 ##}

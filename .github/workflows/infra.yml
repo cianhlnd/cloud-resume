@@ -1,0 +1,52 @@
+name: Terraform plan                # the name shown in the Actions tab
+
+on:                              # TRIGGER: when this runs
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'infra/**'
+      - '.github/workflows/infra.yml'
+  workflow_dispatch:             # adds a "Run workflow" button in the Actions tab
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:                            # what to run
+  azure_workflow:                # a job; the name is your choice
+    runs-on: ubuntu-latest       # GitHub starts a fresh Ubuntu VM for this job
+    steps:                       # run in order, top to bottom, like a script
+    
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Azure login        # a label shown in the run's log
+        uses: azure/login@v3
+        with: 
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }} 
+
+      - name: Run Terraform commands
+        run: |
+          terraform init
+          terraform fmt -check
+          terraform validate
+          terraform plan
+
+defaults:
+    run:
+      working-directory: infra
+
+env:
+  ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+  ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+  ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+  ARM_USE_OIDC: true
+        
