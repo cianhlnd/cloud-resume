@@ -21,7 +21,8 @@ variable "resume_tags" {
   type        = map(string)
 
   default = {
-    project = "Resume"
+    project    = "Resume"
+    managed_by = "terraform"
   }
 }
 
